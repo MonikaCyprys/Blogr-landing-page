@@ -10,7 +10,12 @@
       href="./images/favicon-32x32.png"
     />
     <title>Frontend Mentor | [Blogr]</title>
-    <link rel="stylesheet" href="css/app.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/app.css" />
     <!-- <style>
       .attribution {
         font-size: 11px;
@@ -22,55 +27,73 @@
     </style> -->
   </head>
   <body>
-    <nav>
-      <span class="logo">Blogr</span>
-      <button class="hamburger-menu">
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
-      </button>
-      <div class="mobile-nav">
-        <ul class="list-nav">
-          <li class="Product-nav">
-            Product
-            <span class="arrow-nav fas fa-chevron-down"></span>
-            <ul>
-              <li>Overview</li>
-              <li>Pricing</li>
-              <li>Marketplace</li>
-              <li>Features</li>
-              <li>Integrations</li>
-              <li>Marketplace</li>
-            </ul>
-          </li>
-          <li class="Company-nav">
-            Company
-            <span class="arrow-nav fas fa-chevron-down"></span>
-            <ul>
-              <li>About</li>
-              <li>Team</li>
-              <li>Blog</li>
-              <li>Careers</li>
-            </ul>
-          </li>
-          <li class="Connect-nav">
-            Connect
-            <span class="arrow-nav fas fa-chevron-down"></span>
-            <ul>
-              <li>Contact</li>
-              <li>Newsletter</li>
-              <li>LinkedIn</li>
-              <li>Features</li>
-              <li>Integrations</li>
-              <li>Marketplace</li>
-            </ul>
-          </li>
-        </ul>
-        <button class="login-nav">Login</button>
-        <button class="sign-up-nav">Sign Up</button>
-      </div>
-    </nav>
-
+    <div class="wrapper">
+      <nav>
+        <span class="logo">Blogr</span>
+        <button class="hamburger-menu">
+          <svg
+            class="menu-line"
+            width="32"
+            height="18"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g fill="#FFF" fill-rule="evenodd">
+              <path d="M0 0h32v2H0zM0 8h32v2H0zM0 16h32v2H0z" />
+            </g>
+          </svg>
+          <svg
+            class="menu-close"
+            width="26"
+            height="26"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M23.607.98l1.414 1.413L14.414 13l10.607 10.607-1.414 1.414L13 14.414 2.393 25.021.98 23.607 11.586 13 .98 2.393 2.393.98 13 11.586 23.607.98z"
+              fill="#FFF"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
+        
+        <div class="mobile-nav">
+          <ul class="list-nav">
+            <li class="name-list-nav">
+              Product
+              <span class="arrow-nav fas fa-chevron-down"></span>
+              <ul class="submenu">
+                <li>Overview</li>
+                <li>Pricing</li>
+                <li>Marketplace</li>
+                <li>Features</li>
+                <li>Integrations</li>
+                <li>Marketplace</li>
+              </ul>
+            </li>
+            <li class="name-list-nav">
+              Company
+              <span class="arrow-nav fas fa-chevron-down"></span>
+              <ul class="submenu">
+                <li>About</li>
+                <li>Team</li>
+                <li>Blog</li>
+                <li>Careers</li>
+              </ul>
+            </li>
+            <li class="name-list-nav">
+              Connect
+              <span class="arrow-nav fas fa-chevron-down"></span>
+              <ul class="submenu">
+                <li>Contact</li>
+                <li>Newsletter</li>
+                <li>LinkedIn</li>
+              </ul>
+            </li>
+          </ul>
+          <button class="login-nav">Login</button>
+          <button class="sign-up-nav">Sign Up</button>
+        </div>
+      </nav>
+    </div>
     <!-- 
   A modern publishing platform
   Grow your audience and build your online brand
@@ -134,5 +157,6 @@
       src="https://kit.fontawesome.com/c2672b97d2.js"
       crossorigin="anonymous"
     ></script>
+    <script src="app.js"></script>
   </body>
 </html>

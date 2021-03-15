@@ -1,0 +1,134 @@
+nav {
+  width: 100%;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  .logo {
+    font-size: 33px;
+    font-family: var(--overpass-font);
+    font-weight: 700;
+    letter-spacing: -2px;
+    color: var(--white);
+  }
+  .hamburger-menu {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include tablet-view {
+      display: none;
+    }
+    .menu-line {
+      display: block;
+    }
+    .menu-close {
+      display: none;
+    }
+  }
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 99;
+    top: 100%;
+    left: 5%;
+    right: 5%;
+    background-color: var(--white);
+    border-radius: 5px;
+    height: fit-content;
+    padding: 20px;
+    box-shadow: 0 5px 20px var(--very-dark-grayish-blue);
+    transition: all ease 0.5s;
+    transform: translateX(120%);
+    pointer-events: none;
+
+    &.slide-in {
+      pointer-events: all;
+      transform: translateX(0);
+    }
+    .list-nav {
+      border-bottom: 1px solid var(--grayish-blue);
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      justify-items: flex-start;
+      overflow-y: hidden;
+      @include tablet-view {
+        pointer-events: none;
+      }
+      .name-list-nav {
+        text-align: center;
+        padding: 10px 10px 20px 10px;
+        font-family: var(--ubuntu-font);
+        color: var(--very-dark-blue);
+        font-weight: 500;
+        cursor: pointer;
+
+        span {
+          transform: translateY(1px);
+          color: var(--light-red);
+          transform-origin: 50% 50%;
+          font-size: smaller;
+          margin-left: 5px;
+          pointer-events: none;
+        }
+        &.active {
+          opacity: 0.8;
+          span {
+            transform: rotate(180deg);
+          }
+        }
+        .submenu {
+          margin-top: 20px;
+          padding: 10px;
+          border-radius: 5px;
+          list-style-type: none;
+          background-color: var(--grayish-blue);
+          opacity: 0.8;
+          display: none;
+          pointer-events: none;
+          transition: all ease 0.5s;
+          li {
+            font-size: 16px;
+            padding: 10px;
+            opacity: 0.7;
+            &:hover {
+              opacity: 1;
+            }
+          }
+          &.active {
+            pointer-events: all;
+            display: block;
+          }
+        }
+      }
+    }
+    button {
+      border: none;
+      font-family: var(--ubuntu-font);
+      background-color: transparent;
+      font-weight: 500;
+      font-size: inherit;
+    }
+    .login-nav {
+      margin: 20px auto;
+      font-weight: 500;
+      color: var(--very-dark-blue);
+    }
+    .sign-up-nav {
+      padding: 10px 30px;
+      margin: 0 auto;
+      color: var(--white);
+      background: linear-gradient(
+        to right,
+        var(--gradient-light-red),
+        var(--gradient-red)
+      );
+      border-radius: 20px;
+    }
+  }
+}

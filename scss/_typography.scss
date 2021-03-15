@@ -1,0 +1,23 @@
+:root {
+  --overpass-font: "Overpass", sans-serif;
+  --ubuntu-font: "Ubuntu", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: var(--overpass-font);
+  width: 100%;
+  height: fit-content;
+  .wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: var(--light-red);
+    height: 100vh; //zmien tooo!!! na fit content
+    overflow-x: hidden;
+  }
+}

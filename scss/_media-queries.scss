@@ -1,0 +1,5 @@
+@mixin tablet-view {
+  @media (min-width: 730px) {
+    @content;
+  }
+}
