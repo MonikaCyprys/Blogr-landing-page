@@ -33,12 +33,97 @@ body {
   height: fit-content;
 }
 
+@media screen and (min-width: 1440px) {
+  body {
+    font-size: 22px;
+  }
+}
+
 body .wrapper {
   max-width: 1440px;
   margin: 0 auto;
-  background-color: var(--light-red);
-  height: 100vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   overflow-x: hidden;
+  position: relative;
+}
+
+header {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: var(--light-red);
+  background-image: url(../images/bg-pattern-intro.svg);
+  border-radius: 0 0 0 100px;
+  text-align: center;
+  padding-bottom: 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+header .header-text {
+  font-family: var(--overpass-font);
+  color: var(--white);
+  text-align: center;
+}
+
+header .title-header {
+  padding: 50px 45px 10px 45px;
+}
+
+header .subtitle-header {
+  font-weight: 300;
+  font-size: medium;
+  opacity: 0.8;
+  padding: 10px 50px;
+  padding-bottom: 30px;
+}
+
+@media (min-width: 730px) {
+  header .subtitle-header {
+    padding: 0 50px 40px 50px;
+    font-size: smaller;
+  }
+}
+
+header .start-header {
+  padding: 10px 20px;
+  border-radius: 30px;
+  background-color: var(--white);
+  border: solid 1px var(--white);
+  font-family: var(--ubuntu-font);
+  font-weight: bolder;
+  color: var(--light-red);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+header .start-header:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background-clip: padding-box;
+}
+
+header .learn-more-header {
+  padding: 10px 20px;
+  border-radius: 30px;
+  background-color: transparent;
+  border: solid 1px var(--white);
+  font-family: var(--ubuntu-font);
+  font-weight: bolder;
+  color: var(--white);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+header .learn-more-header:hover {
+  color: var(--light-red);
+  background-color: var(--white);
 }
 
 nav {
@@ -337,5 +422,10 @@ nav .desktop-nav {
     color: var(--grayish-blue);
     cursor: pointer;
   }
+}
+
+main {
+  background-color: var(--wh);
+  padding: 0 20px;
 }
 /*# sourceMappingURL=app.css.map */
