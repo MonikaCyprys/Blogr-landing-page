@@ -131,4 +131,97 @@ nav {
       border-radius: 20px;
     }
   }
+  .desktop-nav {
+    display: none;
+    @include tablet-view {
+      display: inline-flex;
+      flex-direction: row;
+      flex-basis: 100%;
+      display: flex;
+      .list-nav {
+        list-style-type: none;
+        display: flex;
+        flex-grow: 1;
+        justify-self: left;
+        margin-left: 30px;
+        .name-list-nav {
+          font-family: var(--ubuntu-font);
+          color: var(--grayish-blue);
+          font-weight: 500;
+          cursor: pointer;
+          padding: 0 15px;
+          align-self: center;
+          position: relative;
+          span {
+            font-size: small;
+          }
+          &.active {
+            opacity: 0.8;
+            span {
+              transform: rotate(180deg);
+            }
+          }
+          .submenu {
+            position: absolute;
+            top: -20px;
+            left: 0;
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            list-style-type: none;
+            background-color: var(--white);
+            visibility: hidden;
+            pointer-events: none;
+            transition: all ease 0.5s;
+            box-shadow: 0 2px 20px var(--very-dark-grayish-blue);
+
+            li {
+              font-size: 16px;
+              padding: 10px;
+              font-size: smaller;
+              color: var(--very-dark-grayish-blue);
+              cursor: pointer;
+              opacity: 0.8;
+              &:hover {
+                color: var(--very-dark-black-blue);
+                opacity: 1;
+              }
+            }
+            &.active {
+              visibility: visible;
+              pointer-events: all;
+              top: 10px;
+            }
+          }
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+      button {
+        border: none;
+        font-family: var(--ubuntu-font);
+        background-color: transparent;
+        font-weight: 500;
+        font-size: inherit;
+      }
+      .login-nav {
+        margin: 0 30px;
+        font-weight: 500;
+        color: var(--grayish-blue);
+      }
+      .sign-up-nav {
+        padding: 0 30px;
+        color: var(--light-red);
+        background-color: rgba(hsl(240, 9%, 91%), 1);
+        border-radius: 20px;
+        transition: all ease 0.5s;
+        &:hover {
+          background-color: rgba(hsl(240, 9%, 91%), 0.4);
+          color: var(--grayish-blue);
+          cursor: pointer;
+        }
+      }
+    }
+  }
 }
