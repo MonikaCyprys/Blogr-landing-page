@@ -1,11 +1,12 @@
 header {
   height: fit-content;
   background-color: var(--light-red);
-  background-image: url(../images/bg-pattern-intro.svg);
+  // background-image: url(../images/bg-pattern-intro.svg);
   border-radius: 0 0 0 100px;
   text-align: center;
   padding-bottom: 100px;
   position: relative;
+  z-index: 99;
   overflow: hidden;
   .header-text {
     font-family: var(--overpass-font);

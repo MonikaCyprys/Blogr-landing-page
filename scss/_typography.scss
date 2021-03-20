@@ -13,13 +13,14 @@ body {
   font-family: var(--overpass-font);
   width: 100%;
   height: fit-content;
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 1740px) {
     font-size: 22px; ///zrób media
   }
   .wrapper {
     max-width: 1440px;
     margin: 0 auto;
-    height: fit-content; //zmien tooo!!! na fit content
+    padding: 0 auto;
+    height: fit-content;
     overflow-x: hidden;
     position: relative;
   }

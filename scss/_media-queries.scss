@@ -1,5 +1,15 @@
 @mixin tablet-view {
-  @media (min-width: 730px) {
+  @media (min-width: 700px) {
+    @content;
+  }
+}
+@mixin two-section-view {
+  @media (min-width: 950px) {
+    @content;
+  }
+}
+@mixin smaller-font {
+  @media (max-width: 1110px) {
     @content;
   }
 }
