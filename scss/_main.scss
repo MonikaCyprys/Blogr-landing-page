@@ -1,14 +1,17 @@
 main {
   background-color: var(--light-white);
-  padding: 120px 0;
+  padding: 120px 0 0 0;
   transform: translateY(-70px);
   overflow-x: hidden;
   .header-main {
     text-align: center;
     color: var(--very-dark-blue);
-    font-size: xx-large;
     position: relative;
-    top: 50px;
+    padding: 40px 0;
+    @include two-section-view {
+      font-size: xx-large;
+      top: 50px;
+    }
   }
   .services-section {
     display: flex;
@@ -30,12 +33,18 @@ main {
       display: flex;
       flex-wrap: wrap;
       align-content: center;
-      padding-top: 40px;
+      padding: 20px;
+      text-align: center;
+      order: 2;
+      @include two-section-view {
+        text-align: left;
+      }
       .subtitles-section {
         color: var(--very-dark-blue);
         font-weight: bold;
         font-size: 24px;
-        padding: 50px 0 20px 0;
+        padding: 40px 0 20px 0;
+        flex-basis: 100%;
       }
       .text-section {
         line-height: 1.7;
@@ -44,15 +53,19 @@ main {
     .image-section {
       width: 100%;
       margin: 0 auto;
+      position: relative;
+
       @include tablet-view {
         width: 60%;
         height: 60%;
       }
       @include two-section-view {
-        position: relative;
         right: -8%;
+        order: 1;
       }
       &.laptop-section {
+        width: 120%;
+        left: -10%;
         @include two-section-view {
           right: 9%;
         }
@@ -64,71 +77,3 @@ main {
     }
   }
 }
-//     .header-main {
-//       text-align: center;
-//       color: var(--very-dark-blue);
-//       letter-spacing: -0.5px;
-//       padding: 40px 20px;
-//       position: absolute;
-//       top: 0;
-//       left: 0;
-//       right: 0;
-//       z-index: 50;
-//       flex-basis: 100%;
-//       @include tablet-view {
-//         font-size: xx-large;
-//       }
-//     }
-//     .info-section {
-//       @include tablet-view {
-//         font-size: larger;
-//       }
-//       @include two-section-view {
-//         width: 50%;
-//         position: absolute;
-//         left: 0;
-//       }
-//       .subtitles-section {
-//         color: var(--very-dark-blue);
-//         text-align: center;
-//         font-size: x-large;
-//         padding: 30px 0;
-//         @include tablet-view {
-//           font-size: x-large;
-//         }
-//         @include two-section-view {
-//           font-size: x-large;
-//           text-align: left;
-//           color: var(--very-dark-blue);
-//         }
-//         @include smaller-font {
-//           padding: 20px 0 10px 0;
-//         }
-//       }
-//       .text-section {
-//         text-align: center;
-//         line-height: 2;
-//         font-size: smaller;
-
-//         @include two-section-view {
-//           text-align: left;
-//           padding-right: 0;
-//         }
-//         @include smaller-font {
-//           font-size: small;
-//         }
-//       }
-//     }
-//     .image-section {
-//       padding-top: 100px;
-//       width: 50%;
-
-//       @include two-section-view {
-//         order: 2;
-//         position: relative;
-//         width: 70%;
-//         right: -21%;
-//       }
-//     }
-//   }
-// }

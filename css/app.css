@@ -428,7 +428,7 @@ nav .desktop-nav {
 
 main {
   background-color: var(--light-white);
-  padding: 120px 0;
+  padding: 120px 0 0 0;
   -webkit-transform: translateY(-70px);
           transform: translateY(-70px);
   overflow-x: hidden;
@@ -437,9 +437,15 @@ main {
 main .header-main {
   text-align: center;
   color: var(--very-dark-blue);
-  font-size: xx-large;
   position: relative;
-  top: 50px;
+  padding: 40px 0;
+}
+
+@media (min-width: 950px) {
+  main .header-main {
+    font-size: xx-large;
+    top: 50px;
+  }
 }
 
 main .services-section {
@@ -481,14 +487,26 @@ main .services-section .info-section {
       flex-wrap: wrap;
   -ms-flex-line-pack: center;
       align-content: center;
-  padding-top: 40px;
+  padding: 20px;
+  text-align: center;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+@media (min-width: 950px) {
+  main .services-section .info-section {
+    text-align: left;
+  }
 }
 
 main .services-section .info-section .subtitles-section {
   color: var(--very-dark-blue);
   font-weight: bold;
   font-size: 24px;
-  padding: 50px 0 20px 0;
+  padding: 40px 0 20px 0;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }
 
 main .services-section .info-section .text-section {
@@ -498,6 +516,7 @@ main .services-section .info-section .text-section {
 main .services-section .image-section {
   width: 100%;
   margin: 0 auto;
+  position: relative;
 }
 
 @media (min-width: 700px) {
@@ -509,9 +528,16 @@ main .services-section .image-section {
 
 @media (min-width: 950px) {
   main .services-section .image-section {
-    position: relative;
     right: -8%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
   }
+}
+
+main .services-section .image-section.laptop-section {
+  width: 120%;
+  left: -10%;
 }
 
 @media (min-width: 950px) {
