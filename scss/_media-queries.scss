@@ -13,3 +13,8 @@
     @content;
   }
 }
+@mixin smaller-font {
+  @media (max-width: 1110px) {
+    @content;
+  }
+}

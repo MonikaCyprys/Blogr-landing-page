@@ -1,7 +1,7 @@
 :root {
   --light-red: hsl(356, 100%, 66%);
   --very-light-red: hsl(355, 100%, 74%);
-  --very-dark-blue: hsl(209, 58%, 30%);
+  --very-dark-blue: hsl(237, 30%, 29%);
   --light-white: rgb(250, 250, 250);
   --white: hsl(0, 0%, 100%);
   --grayish-blue: hsl(240, 9%, 91%);
@@ -41,7 +41,7 @@ body {
 }
 
 body .wrapper {
-  max-width: 1440px;
+  max-width: 1540px;
   margin: 0 auto;
   padding: 0 auto;
   height: -webkit-fit-content;
@@ -428,7 +428,7 @@ nav .desktop-nav {
 
 main {
   background-color: var(--light-white);
-  padding: 120px 20px 0 20px;
+  padding: 120px 0;
   -webkit-transform: translateY(-70px);
           transform: translateY(-70px);
   overflow-x: hidden;
@@ -523,5 +523,109 @@ main .services-section .image-section {
 main .services-section .image-section img {
   width: 100%;
   height: 100%;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: var(--very-dark-black-blue);
+  border-radius: 0 50px 0 0;
+  padding: 40px 10% 0 10%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 950px) {
+  footer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    font-size: larger;
+  }
+}
+
+footer .logo {
+  font-size: 33px;
+  font-family: var(--overpass-font);
+  font-weight: 700;
+  letter-spacing: -2px;
+  color: var(--white);
+  margin: 0;
+}
+
+@media (min-width: 950px) {
+  footer .logo {
+    margin: 0 15% 0 0;
+  }
+}
+
+footer ul {
+  list-style: none;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 30px 10px;
+}
+
+@media (min-width: 950px) {
+  footer ul {
+    padding: 0 0 30px 0;
+  }
+}
+
+footer ul li {
+  color: var(--grayish-blue);
+  opacity: 0.8;
+  padding: 0;
+  text-align: center;
+  padding: 5px 0;
+  font-size: larger;
+}
+
+footer ul li:nth-of-type(1) {
+  font-weight: bold;
+  color: var(--white);
+  font-size: larger;
+  padding: 5px 10px 20px 10px;
+}
+
+footer ul li:hover {
+  cursor: pointer;
+  color: var(--white);
+}
+
+@media (min-width: 950px) {
+  footer ul li {
+    padding: 10px;
+  }
+}
+
+footer .attribution {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  text-align: center;
+  color: var(--grayish-blue);
+  padding: 50px 0 20px 0;
+}
+
+footer .attribution a {
+  color: var(--very-light-red);
+  cursor: pointer;
+  font-size: smaller;
 }
 /*# sourceMappingURL=app.css.map */
