@@ -5,12 +5,12 @@ footer {
   border-radius: 0 50px 0 0;
   padding: 40px 10% 0 10%;
   align-items: center;
+  font-size: 1rem;
   @include two-section-view {
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: wrap;
     align-items: flex-start;
-    font-size: larger;
   }
   .logo {
     font-size: 33px;
@@ -36,11 +36,10 @@ footer {
       padding: 0;
       text-align: center;
       padding: 5px 0;
-      font-size: larger;
       &:nth-of-type(1) {
         font-weight: bold;
         color: var(--white);
-        font-size: larger;
+        font-size: 1.3rem;
         padding: 5px 10px 20px 10px;
       }
       &:hover {
@@ -57,6 +56,7 @@ footer {
     text-align: center;
     color: var(--grayish-blue);
     padding: 50px 0 20px 0;
+    font-size: 1em;
     a {
       color: var(--very-light-red);
       cursor: pointer;

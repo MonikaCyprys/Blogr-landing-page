@@ -4,6 +4,7 @@ nav {
   display: flex;
   justify-content: space-between;
   position: relative;
+  font-size: 1rem;
   .logo {
     font-size: 33px;
     font-family: var(--overpass-font);
@@ -72,7 +73,6 @@ nav {
           transform: translateY(1px);
           color: var(--light-red);
           transform-origin: 50% 50%;
-          font-size: smaller;
           margin-left: 5px;
           pointer-events: none;
         }
@@ -148,6 +148,7 @@ nav {
           font-family: var(--ubuntu-font);
           color: var(--grayish-blue);
           font-weight: 500;
+          font-size: 1.2em;
           cursor: pointer;
           padding: 0 15px;
           align-self: center;
@@ -176,9 +177,8 @@ nav {
             box-shadow: 0 2px 20px var(--very-dark-grayish-blue);
 
             li {
-              font-size: 16px;
+              font-size: 1.1em;
               padding: 10px;
-              font-size: smaller;
               color: var(--very-dark-grayish-blue);
               cursor: pointer;
               opacity: 0.8;
@@ -203,7 +203,7 @@ nav {
         font-family: var(--ubuntu-font);
         background-color: transparent;
         font-weight: 500;
-        font-size: inherit;
+        font-size: 1.2em;
       }
       .login-nav {
         margin: 0 30px;

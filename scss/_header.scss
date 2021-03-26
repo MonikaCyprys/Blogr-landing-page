@@ -8,23 +8,24 @@ header {
   position: relative;
   z-index: 99;
   overflow: hidden;
+  font-size: 1rem;
   .header-text {
     font-family: var(--overpass-font);
     color: var(--white);
     text-align: center;
+    font-size: 2.2em;
   }
   .title-header {
-    padding: 50px 45px 10px 45px;
+    padding: 50px 25px 10px 25px;
   }
   .subtitle-header {
     font-weight: 300;
-    font-size: medium;
+    font-size: 1em;
     opacity: 0.8;
     padding: 10px 50px;
     padding-bottom: 30px;
     @include tablet-view {
       padding: 0 50px 40px 50px;
-      font-size: smaller;
     }
   }
   .start-header {

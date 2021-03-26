@@ -7,15 +7,16 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-body {
+html {
   font-size: 16px;
+  @include bigger-fonts {
+    font-size: 19px;
+  }
+}
+body {
   font-family: var(--overpass-font);
   width: 100%;
   height: fit-content;
-  @media screen and (min-width: 1740px) {
-    font-size: 22px; ///zrób media
-  }
   .wrapper {
     max-width: 1540px;
     margin: 0 auto;
