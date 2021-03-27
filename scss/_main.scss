@@ -37,7 +37,7 @@ main {
     }
     &.phones-section {
       height: fit-content;
-      background-image: url(/images/bg-pattern-circles.svg),
+      background-image: url(../images/bg-pattern-circles.svg),
         linear-gradient(
           to top,
           var(--very-dark-desaturated-blue),
@@ -52,7 +52,7 @@ main {
       position: relative;
       z-index: 1;
       @include tablet-view {
-        background-image: url(/images/bg-pattern-circles.svg),
+        background-image: url(../images/bg-pattern-circles.svg),
           linear-gradient(
             to left,
             var(--very-dark-desaturated-blue),

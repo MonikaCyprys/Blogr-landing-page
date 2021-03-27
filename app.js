@@ -53,11 +53,11 @@
     screenWidth = window.innerWidth;
     if (screenWidth >= 970) {
       imgs.forEach((img) => {
-        img.src = `/images/illustration-${img.dataset.desktop}.svg`;
+        img.src = `images/illustration-${img.dataset.desktop}.svg`;
       });
     } else if (screenWidth < 970) {
       imgs.forEach((img) => {
-        img.src = `/images/illustration-${img.dataset.mobile}.svg`;
+        img.src = `images/illustration-${img.dataset.mobile}.svg`;
       });
     }
   }

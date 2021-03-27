@@ -163,7 +163,7 @@ nav {
 }
 
 nav .logo {
-  background-image: url(/images/logo.svg);
+  background-image: url(../images/logo.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -509,8 +509,8 @@ main .services-section.phones-section {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  background-image: url(/images/bg-pattern-circles.svg), -webkit-gradient(linear, left bottom, left top, from(var(--very-dark-desaturated-blue)), to(var(--very-dark-gray-blue)));
-  background-image: url(/images/bg-pattern-circles.svg), linear-gradient(to top, var(--very-dark-desaturated-blue), var(--very-dark-gray-blue));
+  background-image: url(../images/bg-pattern-circles.svg), -webkit-gradient(linear, left bottom, left top, from(var(--very-dark-desaturated-blue)), to(var(--very-dark-gray-blue)));
+  background-image: url(../images/bg-pattern-circles.svg), linear-gradient(to top, var(--very-dark-desaturated-blue), var(--very-dark-gray-blue));
   background-repeat: no-repeat;
   background-position: center -110px, top;
   background-size: contain, cover;
@@ -523,8 +523,8 @@ main .services-section.phones-section {
 
 @media (min-width: 750px) {
   main .services-section.phones-section {
-    background-image: url(/images/bg-pattern-circles.svg), -webkit-gradient(linear, right top, left top, from(var(--very-dark-desaturated-blue)), to(var(--very-dark-gray-blue)));
-    background-image: url(/images/bg-pattern-circles.svg), linear-gradient(to left, var(--very-dark-desaturated-blue), var(--very-dark-gray-blue));
+    background-image: url(../images/bg-pattern-circles.svg), -webkit-gradient(linear, right top, left top, from(var(--very-dark-desaturated-blue)), to(var(--very-dark-gray-blue)));
+    background-image: url(../images/bg-pattern-circles.svg), linear-gradient(to left, var(--very-dark-desaturated-blue), var(--very-dark-gray-blue));
     background-position: center -200px, left;
   }
 }
@@ -718,7 +718,7 @@ footer {
 }
 
 footer .logo {
-  background-image: url(/images/logo.svg);
+  background-image: url(../images/logo.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
