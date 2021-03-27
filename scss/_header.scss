@@ -1,6 +1,6 @@
 header {
   height: fit-content;
-  background-image: url(/images/bg-pattern-intro.svg),
+  background-image: url(../images/bg-pattern-intro.svg),
     linear-gradient(to right bottom, var(--gradient-light-red), var(--gradient-red));
   background-repeat: no-repeat;
   background-position: 40% 35%, right;
@@ -10,7 +10,7 @@ header {
   padding-bottom: 140px;
   font-size: 1rem;
   @include tablet-view {
-    background-image: url(/images/bg-pattern-intro.svg),
+    background-image: url(../images/bg-pattern-intro.svg),
       linear-gradient(to right, var(--gradient-light-red), var(--gradient-red));
     background-position: 20% 50%, right;
     background-size: 190%, cover;

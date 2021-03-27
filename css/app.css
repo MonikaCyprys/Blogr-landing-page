@@ -59,8 +59,8 @@ header {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  background-image: url(/images/bg-pattern-intro.svg), -webkit-gradient(linear, left top, right bottom, from(var(--gradient-light-red)), to(var(--gradient-red)));
-  background-image: url(/images/bg-pattern-intro.svg), linear-gradient(to right bottom, var(--gradient-light-red), var(--gradient-red));
+  background-image: url(../images/bg-pattern-intro.svg), -webkit-gradient(linear, left top, right bottom, from(var(--gradient-light-red)), to(var(--gradient-red)));
+  background-image: url(../images/bg-pattern-intro.svg), linear-gradient(to right bottom, var(--gradient-light-red), var(--gradient-red));
   background-repeat: no-repeat;
   background-position: 40% 35%, right;
   background-size: 300%, cover;
@@ -72,8 +72,8 @@ header {
 
 @media (min-width: 750px) {
   header {
-    background-image: url(/images/bg-pattern-intro.svg), -webkit-gradient(linear, left top, right top, from(var(--gradient-light-red)), to(var(--gradient-red)));
-    background-image: url(/images/bg-pattern-intro.svg), linear-gradient(to right, var(--gradient-light-red), var(--gradient-red));
+    background-image: url(../images/bg-pattern-intro.svg), -webkit-gradient(linear, left top, right top, from(var(--gradient-light-red)), to(var(--gradient-red)));
+    background-image: url(../images/bg-pattern-intro.svg), linear-gradient(to right, var(--gradient-light-red), var(--gradient-red));
     background-position: 20% 50%, right;
     background-size: 190%, cover;
   }
