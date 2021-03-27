@@ -5,6 +5,9 @@ nav {
   justify-content: space-between;
   position: relative;
   font-size: 1rem;
+  @include two-section-view {
+    padding: 30px 10%;
+  }
   .logo {
     font-size: 33px;
     font-family: var(--overpass-font);

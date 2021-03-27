@@ -52,20 +52,31 @@ body .wrapper {
   height: fit-content;
   overflow-x: hidden;
   position: relative;
+  background-color: var(--light-white);
 }
 
 header {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  background-color: var(--light-red);
-  border-radius: 0 0 0 100px;
+  background-image: url(/images/bg-pattern-intro.svg), -webkit-gradient(linear, left top, right bottom, from(var(--gradient-light-red)), to(var(--gradient-red)));
+  background-image: url(/images/bg-pattern-intro.svg), linear-gradient(to right bottom, var(--gradient-light-red), var(--gradient-red));
+  background-repeat: no-repeat;
+  background-position: 40% 35%, right;
+  background-size: 300%, cover;
+  border-radius: 0 0 0 120px;
   text-align: center;
-  padding-bottom: 100px;
-  position: relative;
-  z-index: 99;
-  overflow: hidden;
+  padding-bottom: 140px;
   font-size: 1rem;
+}
+
+@media (min-width: 750px) {
+  header {
+    background-image: url(/images/bg-pattern-intro.svg), -webkit-gradient(linear, left top, right top, from(var(--gradient-light-red)), to(var(--gradient-red)));
+    background-image: url(/images/bg-pattern-intro.svg), linear-gradient(to right, var(--gradient-light-red), var(--gradient-red));
+    background-position: 20% 50%, right;
+    background-size: 190%, cover;
+  }
 }
 
 header .header-text {
@@ -76,7 +87,7 @@ header .header-text {
 }
 
 header .title-header {
-  padding: 50px 25px 10px 25px;
+  padding: 80px 25px 10px 25px;
 }
 
 header .subtitle-header {
@@ -143,6 +154,12 @@ nav {
           justify-content: space-between;
   position: relative;
   font-size: 1rem;
+}
+
+@media (min-width: 970px) {
+  nav {
+    padding: 30px 10%;
+  }
 }
 
 nav .logo {
@@ -432,9 +449,7 @@ nav .desktop-nav {
 
 main {
   background-color: var(--light-white);
-  padding: 120px 0 0 0;
-  -webkit-transform: translateY(-70px);
-          transform: translateY(-70px);
+  padding: 0;
   overflow-x: hidden;
   font-size: 1rem;
 }
@@ -487,15 +502,32 @@ main .services-section {
   main .services-section.laptop-section {
     -webkit-transform: translateX(-10%);
             transform: translateX(-10%);
+    padding-bottom: 80px;
   }
 }
 
 main .services-section.phones-section {
-  background: -webkit-gradient(linear, left top, left bottom, from(#2c2d3f), to(#3f4164));
-  background: linear-gradient(#2c2d3f, #3f4164);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-image: url(/images/bg-pattern-circles.svg), -webkit-gradient(linear, left bottom, left top, from(var(--very-dark-desaturated-blue)), to(var(--very-dark-gray-blue)));
+  background-image: url(/images/bg-pattern-circles.svg), linear-gradient(to top, var(--very-dark-desaturated-blue), var(--very-dark-gray-blue));
+  background-repeat: no-repeat;
+  background-position: center -110px, top;
+  background-size: contain, cover;
   padding: 200px 20px 100px 20px;
-  margin-top: 200px;
+  margin: 200px 0 70px 0;
   border-radius: 0 100px;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 750px) {
+  main .services-section.phones-section {
+    background-image: url(/images/bg-pattern-circles.svg), -webkit-gradient(linear, right top, left top, from(var(--very-dark-desaturated-blue)), to(var(--very-dark-gray-blue)));
+    background-image: url(/images/bg-pattern-circles.svg), linear-gradient(to left, var(--very-dark-desaturated-blue), var(--very-dark-gray-blue));
+    background-position: center -200px, left;
+  }
 }
 
 @media (min-width: 970px) {
@@ -507,6 +539,8 @@ main .services-section.phones-section {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+    background-position: -170px -200px, top;
+    background-size: 50%, cover;
   }
 }
 
@@ -549,6 +583,18 @@ main .services-section .info-section .text-section {
   font-size: 1.15em;
 }
 
+@media (min-width: 750px) {
+  main .services-section .info-section .text-section {
+    padding: 0 80px;
+  }
+}
+
+@media (min-width: 970px) {
+  main .services-section .info-section .text-section {
+    padding: 0;
+  }
+}
+
 @media (min-width: 970px) {
   main .services-section .info-section.phones-section {
     -ms-flex-preferred-size: 50%;
@@ -573,7 +619,6 @@ main .services-section .info-section.phones-section .subtitles-section {
 main .services-section .info-section.phones-section .text-section {
   line-height: 1.7;
   opacity: 0.8;
-  padding: 0;
   color: var(--grayish-blue);
 }
 
@@ -584,8 +629,8 @@ main .image-section {
 
 @media (min-width: 750px) {
   main .image-section {
-    width: 57%;
-    height: 57%;
+    width: 60%;
+    height: 60%;
   }
 }
 

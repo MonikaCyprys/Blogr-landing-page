@@ -1,9 +1,9 @@
 main {
   background-color: var(--light-white);
-  padding: 120px 0 0 0;
-  transform: translateY(-70px);
+  padding: 0;
   overflow-x: hidden;
   font-size: 1rem;
+
   .header-main {
     text-align: center;
     color: var(--very-dark-blue);
@@ -15,6 +15,7 @@ main {
       top: 50px;
     }
   }
+
   .services-section {
     display: flex;
     flex-direction: column;
@@ -31,18 +32,41 @@ main {
     &.laptop-section {
       @include two-section-view {
         transform: translateX(-10%);
+        padding-bottom: 80px;
       }
     }
     &.phones-section {
-      background: linear-gradient(rgb(44, 45, 63), rgb(63, 65, 100));
+      height: fit-content;
+      background-image: url(/images/bg-pattern-circles.svg),
+        linear-gradient(
+          to top,
+          var(--very-dark-desaturated-blue),
+          var(--very-dark-gray-blue)
+        );
+      background-repeat: no-repeat;
+      background-position: center -110px, top;
+      background-size: contain, cover;
       padding: 200px 20px 100px 20px;
-      margin-top: 200px;
+      margin: 200px 0 70px 0;
       border-radius: 0 100px;
+      position: relative;
+      z-index: 1;
+      @include tablet-view {
+        background-image: url(/images/bg-pattern-circles.svg),
+          linear-gradient(
+            to left,
+            var(--very-dark-desaturated-blue),
+            var(--very-dark-gray-blue)
+          );
+        background-position: center -200px, left;
+      }
       @include two-section-view {
         margin: 100px 0;
         padding: 55px 10%;
         transform: translateX(0);
         justify-content: flex-end;
+        background-position: -170px -200px, top;
+        background-size: 50%, cover;
       }
     }
     .info-section {
@@ -69,6 +93,12 @@ main {
       .text-section {
         line-height: 1.7;
         font-size: 1.15em;
+        @include tablet-view {
+          padding: 0 80px;
+        }
+        @include two-section-view {
+          padding: 0;
+        }
       }
       &.phones-section {
         @include two-section-view {
@@ -86,7 +116,6 @@ main {
         .text-section {
           line-height: 1.7;
           opacity: 0.8;
-          padding: 0;
           color: var(--grayish-blue);
         }
       }
@@ -96,8 +125,8 @@ main {
     width: 100%;
     margin: 0 auto;
     @include tablet-view {
-      width: 57%;
-      height: 57%;
+      width: 60%;
+      height: 60%;
     }
     @include two-section-view {
       position: relative;

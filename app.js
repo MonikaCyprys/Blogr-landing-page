@@ -5,7 +5,7 @@
   const mobileNav = document.querySelector(".mobile-nav");
   const mobileNavOpen = document.querySelector(".menu-close");
   const mobileNavClose = document.querySelector(".menu-line ");
-
+  let elementIsClicked = false;
   function showMenu() {
     if (!mobileNav.classList.contains("slide-in")) {
       mobileNavOpen.style.display = "block";
@@ -22,14 +22,23 @@
     if (element.classList.contains("name-list-nav")) {
       if (!element.children[1].classList.contains("active")) {
         element.children[1].classList.add("active");
-      } else element.children[1].classList.remove("active");
+      } else if (elementIsClicked) {
+        element.children[1].classList.remove("active");
+        elementIsClicked = false; //ttutaj
+      }
     }
+  }
+  function closeSubmenu() {
+    elementIsClicked = true;
   }
   nameSection.forEach((section) => {
     section.addEventListener("click", showSubmenu);
   }, false);
 
   menuBtn.addEventListener("click", showMenu);
+  submenu.forEach((element) => {
+    element.addEventListener("click", closeSubmenu);
+  });
 })();
 
 (function () {
