@@ -34,9 +34,9 @@ Users should be able to:
 
 ### What I learned
 
-- use multiple backgrounds
-- better scaling images and contents
-- use media-queries with scss 
+- using multiple backgrounds
+- better images and contents scaling
+- using media-queries with scss 
 
 ### Useful resources
 
