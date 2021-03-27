@@ -13,11 +13,12 @@ footer {
     align-items: flex-start;
   }
   .logo {
-    font-size: 33px;
-    font-family: var(--overpass-font);
-    font-weight: 700;
-    letter-spacing: -2px;
-    color: var(--white);
+    background-image: url(/images/logo.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 75px;
+    height: 40px;
     margin: 0;
     @include two-section-view {
       margin: 0 15% 0 0;
@@ -26,7 +27,7 @@ footer {
   ul {
     list-style: none;
     flex-grow: 1;
-    padding: 30px 10px;
+    padding: 70px 10px 30px 10px;
     @include two-section-view {
       padding: 0 0 30px 0;
     }

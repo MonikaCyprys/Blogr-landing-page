@@ -718,11 +718,12 @@ footer {
 }
 
 footer .logo {
-  font-size: 33px;
-  font-family: var(--overpass-font);
-  font-weight: 700;
-  letter-spacing: -2px;
-  color: var(--white);
+  background-image: url(/images/logo.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 75px;
+  height: 40px;
   margin: 0;
 }
 
@@ -737,7 +738,7 @@ footer ul {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  padding: 30px 10px;
+  padding: 70px 10px 30px 10px;
 }
 
 @media (min-width: 970px) {
