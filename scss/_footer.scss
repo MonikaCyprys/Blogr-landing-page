@@ -36,16 +36,20 @@ footer {
       padding: 0;
       text-align: center;
       padding: 5px 0;
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+        color: var(--white);
+      }
       &:nth-of-type(1) {
         font-weight: bold;
         color: var(--white);
         font-size: 1.3rem;
         padding: 5px 10px 20px 10px;
+        text-decoration: none;
+        pointer-events: none;
       }
-      &:hover {
-        cursor: pointer;
-        color: var(--white);
-      }
+
       @include two-section-view {
         padding: 10px;
       }

@@ -1,7 +1,7 @@
 :root {
   --light-red: hsl(356, 100%, 66%);
   --very-light-red: hsl(355, 100%, 74%);
-  --very-dark-blue: hsl(237, 30%, 29%);
+  --very-dark-blue: hsl(236, 31%, 35%);
   --light-white: rgb(250, 250, 250);
   --white: hsl(0, 0%, 100%);
   --grayish-blue: hsl(240, 9%, 91%);
@@ -163,11 +163,12 @@ nav {
 }
 
 nav .logo {
-  font-size: 33px;
-  font-family: var(--overpass-font);
-  font-weight: 700;
-  letter-spacing: -2px;
-  color: var(--white);
+  background-image: url(/images/logo.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 75px;
+  height: 40px;
 }
 
 nav .hamburger-menu {
@@ -367,7 +368,6 @@ nav .desktop-nav {
     font-family: var(--ubuntu-font);
     color: var(--grayish-blue);
     font-weight: 500;
-    font-size: 1.2em;
     cursor: pointer;
     padding: 0 15px;
     -ms-flex-item-align: center;
@@ -394,7 +394,7 @@ nav .desktop-nav {
     border-radius: 5px;
     list-style-type: none;
     background-color: var(--white);
-    visibility: hidden;
+    opacity: 0;
     pointer-events: none;
     -webkit-transition: all ease 0.5s;
     transition: all ease 0.5s;
@@ -402,7 +402,6 @@ nav .desktop-nav {
             box-shadow: 0 2px 20px var(--very-dark-grayish-blue);
   }
   nav .desktop-nav .list-nav .name-list-nav .submenu li {
-    font-size: 1.1em;
     padding: 10px;
     color: var(--very-dark-grayish-blue);
     cursor: pointer;
@@ -413,7 +412,7 @@ nav .desktop-nav {
     opacity: 1;
   }
   nav .desktop-nav .list-nav .name-list-nav .submenu.active {
-    visibility: visible;
+    opacity: 1;
     pointer-events: all;
     top: 10px;
   }
@@ -755,16 +754,19 @@ footer ul li {
   padding: 5px 0;
 }
 
+footer ul li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: var(--white);
+}
+
 footer ul li:nth-of-type(1) {
   font-weight: bold;
   color: var(--white);
   font-size: 1.3rem;
   padding: 5px 10px 20px 10px;
-}
-
-footer ul li:hover {
-  cursor: pointer;
-  color: var(--white);
+  text-decoration: none;
+  pointer-events: none;
 }
 
 @media (min-width: 970px) {
