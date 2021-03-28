@@ -11,10 +11,10 @@
     const iconHamburger =
       menuBtn.style.backgroundImage === "url(../images/icon-hamburger.svg)";
     if (!mobileNav.classList.contains("slide-in") && !iconHamburger) {
-      menuBtn.style.backgroundImage = "url(../images/icon-close.svg)";
+      menuBtn.style.backgroundImage = "url(images/icon-close.svg)";
       mobileNav.classList.add("slide-in");
     } else {
-      menuBtn.style.backgroundImage = "url(../images/icon-hamburger.svg)";
+      menuBtn.style.backgroundImage = "url(images/icon-hamburger.svg)";
       mobileNav.classList.remove("slide-in");
     }
   }
