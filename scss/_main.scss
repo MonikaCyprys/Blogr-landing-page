@@ -127,6 +127,7 @@ main {
     @include tablet-view {
       width: 60%;
       height: 60%;
+      width: -moz-max-content;
     }
     @include two-section-view {
       position: relative;

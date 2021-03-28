@@ -8,13 +8,13 @@
   const mobileNavClose = document.querySelector(".menu-line ");
 
   function showMenu() {
-    if (!mobileNav.classList.contains("slide-in")) {
-      mobileNavOpen.style.display = "block";
-      mobileNavClose.style.display = "none";
+    const iconHamburger =
+      menuBtn.style.backgroundImage === "url(../images/icon-hamburger.svg)";
+    if (!mobileNav.classList.contains("slide-in") && !iconHamburger) {
+      menuBtn.style.backgroundImage = "url(../images/icon-close.svg)";
       mobileNav.classList.add("slide-in");
     } else {
-      mobileNavClose.style.display = "block";
-      mobileNavOpen.style.display = "none";
+      menuBtn.style.backgroundImage = "url(../images/icon-hamburger.svg)";
       mobileNav.classList.remove("slide-in");
     }
   }
